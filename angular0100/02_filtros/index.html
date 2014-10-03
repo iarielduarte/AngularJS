@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Filtros en AngularJS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
+    </head>
+    <body>
+        <h1>Mi tienda de verduras</h1>
+        
+        <ul>
+            <li>Apio {{ 50 | currency }} </li>
+            <li>Cebolla {{ 2 | currency:"€" }} </li>
+            <li>Espinaca {{ 2 + 10 | currency:"£" }} importado de {{ 'England' | uppercase }}</li>
+        </ul>
+    </body>
+
+</html>
