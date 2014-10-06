@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="accion">
+    <head>
+        <meta charset="utf-8">
+        <title>Colleccion de Datos</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-controller='controllador1'>
+            <h1>Nombres</h1>
+            
+            <ul>
+                <li ng-repeat = "nombreIndividual in nombresSimples">{{nombreIndividual}}</li>
+            </ul>
+            
+             <h1>Bandas de Rock</h1>
+           
+              <ul>
+                <li ng-repeat = "banda in bandas">{{banda.nombre}} - {{banda.pais}}</li>
+            </ul>
+        </div>
+       
+       
+        
+        <script>
+            var miAplicacion = angular.module( 'accion', [])
+           
+            miAplicacion.controller('controllador1', [ '$scope', function($scope){
+              
+                $scope.nombresSimples = ["Alois", "Carlos", "Ariel" ];
+                
+                $scope.bandas = [
+                    {nombre: "Hermerica", pais: "Argentina"},
+                    {nombre: "Metallica", pais: "USA"},
+                    {nombre: "AC/DC", pais: "Argentina"}
+                ]
+            }])
+            
+           
+          
+        </script>
+       
+    </body>
+
+</html>

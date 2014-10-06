@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="miApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Metodos en AngularJS</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-controller='circunferencia'>
+            
+            <label>Diametros</label>
+            
+            <input type="text" ng-model="diametro">
+            
+            <button ng-click="calcularCircunferencia()"> Calcular Circunferencia</button>
+            
+            {{ circunferencia }}
+        </div>
+       
+       
+        
+        <script>
+            var miAplicacion = angular.module( 'miApp', [])
+           
+            miAplicacion.controller('circunferencia', [ '$scope', function($scope){
+                var pi = 3.14;
+                $scope.calcularCircunferencia = function(){
+                
+                    $scope.circunferencia = $scope.diametro * pi;
+                }
+                
+            }])
+            
+           
+          
+        </script>
+       
+    </body>
+
+</html>
