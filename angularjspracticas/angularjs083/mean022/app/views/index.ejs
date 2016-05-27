@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Usar la propiedad 'title' para renderizar un título de página  -->
+	<title><%= title %></title>
+</head>
+<body>
+	<!-- Si un usuario es autentificado, mostrar el nombre completo del usuario, de no ser así mostrar los enlaces de autentificación -->
+	<% if ( userFullName ) { %>
+		<h2>Hola <%=userFullName%> </h2> 
+		<a href="/signout">Cerrar Sesión</a>
+	<% } else { %>
+		<a href="/signup">Crear Cuenta</a>
+		<a href="/signin">Identificarse</a>
+	<% } %>
+
+	<section ng-view></section>
+    
+	<script type="text/javascript" src="/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="/example/example.client.module.js"></script>
+	<script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
+	<script type="text/javascript" src="/example/config/example.client.routes.js"></script>
+	<script type="text/javascript" src="/application.js"></script>
+</body>
+</html>

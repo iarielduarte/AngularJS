@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+      <% if ( userFullName ) { %>
+        <h2>Hola <%=userFullName%> </h2> 
+        <a href="/signout">Cerrar Sesión</a>
+      <% } else { %>
+        <a href="/signup">Crear Cuenta</a>
+        <a href="/signin">Identificarse</a>
+    <% } %>
+    <br>
+      <img src="img/logo.png" alt="Logo">
+    </body>
+</html>
